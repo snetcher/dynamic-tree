@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery - dynamic tree</title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/dynamic-tree.js"></script>
+
+<link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+<div id="nav-accordion">
+    <ul>
+        <li><a href="#">Lorem Ipsum</a>
+            <ul>
+                <li><a href="#">is simply dummy text</a>
+                    <ul>
+                        <li><a href="#">of the printing and typesetting industry.</a></li>
+                        <li><a href="#">Lorem Ipsum has been</a>
+                            <ul>
+                                <li><a href="#">the industry's standard dummy text</a></li>
+                                <li><a href="#">ever since the 1500s</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">when an unknown printer took</a>
+                    <ul>
+                        <li><a href="#">a galley of type and scrambled</a></li>
+                        <li><a href="#">it to make a type specimen book</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">It has survived not only five centuries</a>
+            <ul>
+                <li><a href="#">but also the leap into electronic typesetting</a></li>
+                <li><a href="#">remaining essentially unchanged</a></li>
+            </ul>
+        </li>
+        <li><a href="#">It was popularised in the 1960s</a></li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+$(document).ready( function(){
+	var container = $( '#nav-accordion' ),
+	      target = 'ul ul';
+		  
+		  navacc = new NavAcc( container, target );
+});
+</script>
+
+</body>
+</html>

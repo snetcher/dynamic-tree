@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	color:#666;
+	width:320px;
+	margin:30px auto;
+	font-family: sans-serif;
+	font-size:14px
+}
+a {
+	color: #efefef;
+}
+a.with-submenu {
+	color: #fff;
+}
+#nav-accordion ul, #nav-accordion li {
+	display:block;
+	margin:0;
+	padding:0
+}
+#nav-accordion ul > li > ul {
+	margin-top: 0;
+}
+#nav-accordion ul {
+}
+#nav-accordion li {
+	background: #ccc;
+}
+#nav-accordion ul ul {
+}
+#nav-accordion li li {
+	background: #eee;
+	padding:0 0 0 10px
+}
+#nav-accordion li li li {
+	background: #f9f9f9;
+}
+#nav-accordion li li li li {
+	background: #fdfdfd;
+}
+#nav-accordion li a {
+	padding: 5px 10px;
+	display: block;
+	text-decoration: none;
+	border-color: #dddddd;
+	border-width:  0 0 1px 0;
+	border-style: solid;
+}
+#nav-accordion li li a {
+	color: #bbb;
+	border-width: 0 0 1px 1px;
+}
+#nav-accordion > ul > li a.with-submenu:after, #nav-accordion li li a.with-submenu:after {
+	content:'>';
+	float:right;
+	display:block;
+	width:16px;
+	height:16px;
+	font-size:13px;
+	color:#ccc;
+	background:#eee;
+	border-radius:8px;
+	-moz-border-radius:8px;
+	text-align:center;
+	font-weight:700
+}
+#nav-accordion li li a.with-submenu:after {
+	color:#eee;
+	background:#ddd
+}
+#nav-accordion a.with-submenu.active:after {
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-moz-transform: rotate(90deg)
+}
