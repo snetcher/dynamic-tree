@@ -10,10 +10,11 @@ function NavAcc(container, target) {
 				.addClass('with-submenu')
 				.on('click', function(e) {
 
-									$(this).toggleClass('active')
-									.next()
-										.slideToggle('fast')
-										.toggleClass('open')
-									e.preventDefault()
-									})
+					$(this).toggleClass('active')
+					.next()
+						.slideToggle('fast')
+						.toggleClass('open');
+						
+					e.preventDefault()
+					})
 	}
