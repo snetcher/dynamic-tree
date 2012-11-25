@@ -1,58 +1,83 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery - dynamic tree</title>
+    <meta charset="UTF-8">
+    <title>jQuery - dynamic tree</title>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="js/dynamic-tree.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/dynamic-tree.js"></script>
 
-<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
 </head>
 
 <body>
-<div id="nav-accordion">
-    <ul>
-        <li><a href="#">Lorem Ipsum</a>
-            <ul>
-                <li><a href="#">is simply dummy text</a>
-                    <ul>
-                        <li><a href="#">of the printing and typesetting industry.</a></li>
-                        <li><a href="#">Lorem Ipsum has been</a>
-                            <ul>
-                                <li><a href="#">the industry's standard dummy text</a></li>
-                                <li><a href="#">ever since the 1500s</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">when an unknown printer took</a>
-                    <ul>
-                        <li><a href="#">a galley of type and scrambled</a></li>
-                        <li><a href="#">it to make a type specimen book</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><a href="#">It has survived not only five centuries</a>
-            <ul>
-                <li><a href="#">but also the leap into electronic typesetting</a></li>
-                <li><a href="#">remaining essentially unchanged</a></li>
-            </ul>
-        </li>
-        <li><a href="#">It was popularised in the 1960s</a></li>
-    </ul>
-</div>
 
-<script type="text/javascript">
-$(document).ready(function() {
-    var container = $('#nav-accordion'),
-        target = 'ul ul';
+    <div class="nav-accordion">
+        <ul>
+            <li><a href="#1">Lorem Ipsum</a>
+                <ul>
+                    <li><a href="#1-1">is simply dummy text</a>
+                        <ul>
+                            <li><a href="#1-1-1">of the printing and typesetting industry.</a></li>
+                            <li><a href="#1-1-2">Lorem Ipsum has been</a>
+                                <ul>
+                                    <li><a href="#1-1-2-1">the industry's standard dummy text</a></li>
+                                    <li><a href="#1-1-2-2">ever since the 1500s</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#1-2">when an unknown printer took</a>
+                        <ul>
+                            <li><a href="#1-2-1">a galley of type and scrambled</a></li>
+                            <li><a href="#1-2-2">it to make a type specimen book</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#2">It has survived not only five centuries</a>
+                <ul>
+                    <li><a href="#2-1">but also the leap into electronic typesetting</a></li>
+                    <li><a href="#2-2">remaining essentially unchanged</a></li>
+                </ul>
+            </li>
+            <li><a href="#3">It was popularised in the 1960s</a></li>
+        </ul>
+    </div>
 
-    navacc = new NavAcc(container, target);
-});
-</script>
+    <hr />
+
+    <div class="slided-blocks">
+        <h2 class="section-title">Section Title</h2>
+        <div class="section-content">
+            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <h2 class="section-title">Section Title</h2>
+        <div class="section-content">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <h2 class="section-title">Section Title</h2>
+        <div class="section-content">
+            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages...</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        
+        navacc = new NavAcc($('.nav-accordion'), 'ul ul');
+        navacc2 = new NavAcc($('.slided-blocks'), '.section-content');
+    });
+    </script>
 
 </body>
 </html>

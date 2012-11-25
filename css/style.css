@@ -9,49 +9,53 @@ body {
 	font-family: sans-serif;
 }
 a {
-	color: #efefef;
+	display: block
 }
-a.with-submenu {
-	color: #fff;
-}
-#nav-accordion ul, #nav-accordion li {
+
+.nav-accordion ul, .nav-accordion li {
 	display:block;
 	margin:0;
 	padding:0;
 }
-#nav-accordion ul > li > ul {
+.nav-accordion ul > li > ul {
 	margin-top: 0;
 }
-#nav-accordion ul {
+.nav-accordion ul {
 }
-#nav-accordion li {
+.nav-accordion li {
 	background: #ccc;
 }
-#nav-accordion ul ul {
+.nav-accordion li a{
+	color: #efefef;
 }
-#nav-accordion li li {
+.nav-accordion ul ul {
+}
+.nav-accordion li li {
 	padding:0 0 0 10px;
 	background: #eee;
 }
-#nav-accordion li li li {
+.nav-accordion li li li {
 	background: #f9f9f9;
 }
-#nav-accordion li li li li {
+.nav-accordion li li li li {
 	background: #fdfdfd;
 }
-#nav-accordion li a {
+.nav-accordion li a {
 	display: block;
 	padding: 5px 10px;
 	border-width:  0 0 1px 0;
 	border-style: solid;
-	border-color: #dddddd;
+	border-color: #ddd;
 	text-decoration: none;
 }
-#nav-accordion li li a {
+.nav-accordion li li a {
 	border-width: 0 0 1px 1px;
 	color: #bbb;
 }
-#nav-accordion > ul > li a.with-submenu:after, #nav-accordion li li a.with-submenu:after {
+.nav-accordion a.with-submenu {
+	/*color: #fff;*/
+}
+.nav-accordion > ul > li a.with-submenu:after, .nav-accordion li li a.with-submenu:after {
 	display:block;
 	float:right;
 	width:16px;
@@ -65,13 +69,18 @@ a.with-submenu {
 	font-weight:700;
 	font-size:13px;
 }
-#nav-accordion li li a.with-submenu:after {
+.nav-accordion li li a.with-submenu:after {
 	background:#ddd;
 	color:#eee;
 }
-#nav-accordion a.with-submenu.active:after {
-	-webkit-transform: rotate(90deg);
-	-moz-transform: rotate(90deg);
-	-o-transform: rotate(90deg);
-	transform: rotate(90deg);
+.nav-accordion a.with-submenu.active:after {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
+
+.section-content h2,
+.section-content p,
+.section-content ul,
+.section-content ol{ margin: 0 0 0}

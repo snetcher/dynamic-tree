@@ -1,14 +1,19 @@
 function NavAcc(container, target) {
+
 	this.container = container;
-	this.target = target;
+	this.target    = target;
 
-	this.subm = this.container.find(this.target).hide().prev().addClass('with-submenu').on('click', function(e) {
-		$(this).next('ul').slideToggle('fast').toggleClass('open').siblings('ul:visible').slideUp('fast');
+		this.container
+			.find(this.target)
+				.hide()
+			.prev()
+				.addClass('with-submenu')
+				.on('click', function(e) {
 
-		$(this).toggleClass('active');
-
-		$(this).siblings('a').removeClass('active');
-
-		e.preventDefault()
-	})
-}
+									$(this).toggleClass('active')
+									.next()
+										.slideToggle('fast')
+										.toggleClass('open')
+									e.preventDefault()
+									})
+	}
